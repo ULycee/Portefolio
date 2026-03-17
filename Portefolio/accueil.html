@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetharajah Umesh - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="accueil.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold text-primary-light dark:text-primary-dark">Portefolio</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="./accueil.html" class="flex items-center gap-1 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300" title="Accueil">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a href="./competences.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Compétences</a>
+                    <a href="./stages.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Stages</a>
+                    <a href="./veille.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Veille</a>
+                    <a href="./contacts.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contacts</a>
+                </div>
+                <div class="flex items-center">
+                    <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+            <a href="./accueil.html" class="flex items-center gap-2 py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                </svg>
+                Home
+            </a>
+            <a href="./competences.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Compétences</a>
+            <a href="./stages.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Stages</a>
+            <a href="./veille.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Veille</a>
+            <a href="./contacts.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contacts</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 flex-grow">
+        <section id="about" class="mb-20 pt-16 animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-primary-light dark:text-primary-dark">Bonjour, Je suis Navaneetharajah Umesh</h1>
+            <p class="text-xl mb-8">Un passionné de codage et de développement, en deuxième année de BTS option slam, qui vous souhaite une bonne visite sur son site.</p>
+        </section>
+
+        <section id="projects" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-primary-light dark:text-primary-dark">Projets</h2>
+            <div class="responsive-grid">
+                <a href="./sitevitrine.html" style="text-decoration: none;">
+                <div class="grid-item" style="background: linear-gradient(145deg, #d1d5db, #9ca3af) !important; cursor: pointer;">
+                    <div class="card-image-wrapper">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Site vitrine</h3>
+                        <p>Un site vitrine pour présenter un sujet de notre choix, notre premier projet en première année de BTS SIO.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="./93moov.html" style="text-decoration: none;">
+                <div class="grid-item" style="background: linear-gradient(145deg, #d1d5db, #9ca3af) !important; cursor: pointer;">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-2"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>93Moov</h3>
+                        <p>Un site d'une association fictive, dans le but de mettre nos compétences acquises à l'épreuve.</p>
+                        <div class="tags">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="./93moovandroid.html" style="text-decoration: none;">
+                <div class="grid-item" style="background: linear-gradient(145deg, #d1d5db, #9ca3af) !important; cursor: pointer;">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-3"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>93Moov Android</h3>
+                        <p>Une version mobile de 93Moov, en conservant les fonctionnalités les plus essentielles.</p>
+                        <div class="tags">
+                            <span>Android</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 mt-12 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <p>&copy; Portefolio Navaneetharajah Umesh</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Sauvegarder la préférence de thème dans localStorage
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Menu mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lissage de la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -60;
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation de scroll avec Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

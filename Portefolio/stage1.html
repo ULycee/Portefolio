@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetharajah Umesh - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="accueil.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold text-primary-light dark:text-primary-dark">Portefolio</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="./accueil.html" class="flex items-center gap-1 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300" title="Accueil">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a href="./competences.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Compétences</a>
+                    <a href="./stages.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Stages</a>
+                    <a href="./veille.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Veille</a>
+                    <a href="./contacts.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contacts</a>
+                </div>
+                <div class="flex items-center">
+                    <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+            <a href="./accueil.html" class="flex items-center gap-2 py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                </svg>
+                Home
+            </a>
+            <a href="./competences.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Compétences</a>
+            <a href="./stages.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Stages</a>
+            <a href="./veille.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Veille</a>
+            <a href="./contacts.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contacts</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 flex-grow">
+        <section class="w-full mx-auto py-10 bg-gray-50 dark:bg-gray-900 dark:text-white">
+  <!-- Title -->
+  <div
+    class="w-fit pb-1 px-2 mx-4 rounded-md text-2xl font-semibold border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+    Stage dans l'association SavoirFormer</div>
+
+  <div class="w-full h-full flex flex-col items-center md:py-4 py-10">
+    <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.easytutoriel.com/wp-content/uploads/2023/09/serveur-php-mysql-xampp-windows-9-unpacking-installation.png" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Première semaine</h2>
+        <p class="text-md mt-4">Travaillant en distanciel, j'ai débuté la première semaine par une phase d'audit technique du site existant, lequel était initialement conçu en HTML/PHP et hébergé sous un serveur Apache. Après avoir reçu le cahier des charges et les ressources nécessaires le 30 mai, j'ai instauré un rythme de suivi hebdomadaire par visioconférence chaque vendredi. J'ai consacré cette première étape à l'élaboration d'une maquette graphique et d'une arborescence structurée, permettant à l'association de visualiser le rendu futur et d'ajuster l'identité visuelle, notamment les couleurs, lors de notre échange du 31 mai.
+</div>
+
+    </div>
+    <!-- Col - 3 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+      <!--  -->
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Deuxième semaine</h2>
+
+        <p class="text-md mt-4">Au cours de la deuxième semaine, j'ai entamé le développement du site en langage HTML, en commençant par la structure du menu. Cette phase a été marquée par un incident technique majeur quatre jours après le lancement du code, entraînant la corruption de plusieurs fichiers. J'ai néanmoins fait preuve de réactivité en récupérant une partie des données pour combler les lacunes et poursuivre le projet. Cependant, la visioconférence du vendredi 7 juin a marqué un tournant stratégique : l'association m'a alors donné accès à son environnement WordPress. Ce système de gestion de contenu (CMS) a été choisi pour sa capacité à simplifier la publication et la maintenance future du site, offrant ainsi une solution plus pérenne pour l'équipe. Ce changement de direction m'a conduit à réorganiser l'intégralité du travail accompli durant les deux premières semaines pour tout reconstruire sur cette nouvelle plateforme.</div>
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483197931396927569/image.png?ex=69b9b737&is=69b865b7&hm=ae75a747d6c10ef5f9de9e8665aedbbd8617dbaa5fea8ff960855450c309c5d0&" alt="billboard image" />
+
+    </div>
+    <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://imgs.search.brave.com/AQ3KmYNK0V-fl6eovWY0VzmoyPZno76HoSqI-0_KDSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZWRlbGl2ZXJ5Lm5l/dC9McWlXTG0tM01H/YllIdEZ1VWJjQnRB/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9zaXRl/cy80Ni8yMDIzLzA2/L1RhYmxlYXUtZGUt/Ym9yZC1kZS1Xb3Jk/UHJlc3MucG5nL3B1/YmxpYw" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Troisième semaine</h2>
+        <p class="text-md mt-4">La troisième semaine a donc été dédiée à l'appropriation de l'écosystème WordPress. Après une phase de veille technologique et l'analyse de plusieurs solutions, j'ai porté mon choix sur l'extension Elementor. Ce constructeur de pages (Page Builder) se distingue par son interface de "glisser-déposer" (Drag & Drop), qui permet de concevoir des mises en page complexes de manière visuelle et intuitive sans manipulation directe du code source. Ce choix était stratégique, car il garantit à l'association une autonomie totale pour modifier le contenu à leur guise par la suite. En parallèle, le président de l'association m'a formé à l'utilisation de l'interface de l'hébergeur LWS, me permettant d'intégrer des fonctionnalités de
+référencement et de protection contre les attaques informatiques basiques, tout en approfondissant mes connaissances sur les réglages avancés de WordPress.
+</div>
+
+    </div>
+    <!-- Col - 3 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+      <!--  -->
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Quatrième semaine</h2>
+
+        <p class="text-md mt-4">Durant la quatrième semaine, mon avancement a été ralenti par des raisons médicales entre le 16 et le 19 juin, ce qui nous a conduits à décaler le point hebdomadaire au mardi suivant. Dès mon retour le 20 juin, j'ai intensifié mes efforts pour produire la page d'accueil, les pages institutionnelles, ainsi que le header et le footer. Lors de la présentation de ces travaux, j'ai procédé à des ajustements ergonomiques en supprimant les éléments superflus pour épurer la navigation. J'ai profité de cet échange pour former l'équipe au système de construction visuelle, leur expliquant comment gérer eux-mêmes l'agencement des blocs de contenu.
+</div>
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://imgs.search.brave.com/Q7m_nkN9cUllCfmHMNrh8fzUfNMi61cSZxnLTjc4VFQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMx/MDkzMTUyNi9mci92/ZWN0b3JpZWwvc2ln/bmUtcm91Z2UtdmVj/dG9yaWVsLWRpbnRl/cmRpY3Rpb24uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTk1/YldNMUI0aTEtZXVj/VnR0NUV2WFh2WlZi/Y2ozR0tKNXFiSUhT/SFdyN1E9" alt="billboard image" />
+
+  </div>
+  <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483201981396025434/image.png?ex=69b9bafc&is=69b8697c&hm=388ca84feb75619fc2e4661de5eb5f17d4e776d2edcd2d68e70549fd39ae7576&" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Cinquième semaine</h2>
+        <p class="text-md mt-4">Enfin, la cinquième et dernière semaine a été consacrée à la finalisation du projet et à la résolution de bugs techniques. J'ai notamment dû faire face à des erreurs d'enregistrement de pages dues à une mise à jour de l'hébergeur, ce qui m'a obligé à restaurer certains éléments. Malgré ces aléas, j'ai pu livrer un site web finalisé, fonctionnel et parfaitement conforme aux exigences de l'association. Ce stage s'est conclu par la remise d'un outil clé en main, optimisé pour les besoins actuels de FormerSavoir et facilement administrable par ses membres.
+</div>
+
+    </div>
+</section>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 mt-12 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <p>&copy; Portefolio Navaneetharajah Umesh</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        }
+
+        // Sauvegarder la préférence de thème dans localStorage
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Menu mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lissage de la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -60;
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation de scroll avec Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

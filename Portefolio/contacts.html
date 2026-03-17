@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetharajah Umesh - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold text-primary-light dark:text-primary-dark">Portefolio</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="./accueil.html" class="flex items-center gap-1 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300" title="Accueil">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a href="./competences.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Compétences</a>
+                    <a href="./stages.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Stages</a>
+                    <a href="./veille.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Veille</a>
+                    <a href="./contacts.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contacts</a>
+                </div>
+                <div class="flex items-center">
+                    <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+            <a href="./competences.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Compétences</a>
+            <a href="./stages.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Stages</a>
+            <a href="./veille.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Veille</a>
+            <a href="./contacts.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contacts</a>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-16 flex-grow">
+    <div class="bg-gray-100 dark:bg-gray-900 py-24 sm:py-32 transition-colors duration-300">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">Prendre contact</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Besoin de me contacter, n'hesitez pas.</p>
+    </div>
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+      <div class="flex flex-col gap-y-12 rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 shadow-sm transition-colors duration-300">
+        <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white shadow-sm">
+          <svg class="h-6 w-6 text-gray-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 11C3 9.11438 3 8.17157 3.58579 7.58579C4.17157 7 5.11438 7 7 7H8H16H17C18.8856 7 19.8284 7 20.4142 7.58579C21 8.17157 21 9.11438 21 11V17C21 18.8856 21 19.8284 20.4142 20.4142C19.8284 21 18.8856 21 17 21H16H8H7C5.11438 21 4.17157 21 3.58579 20.4142C3 19.8284 3 18.8856 3 17V11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8 21V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="flex flex-auto flex-col items-start">
+          <div class="flex-auto">
+            <h3 class="text-xl font-medium tracking-tight text-gray-900 dark:text-white">Email</h3>
+            <p class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">Envoyez-moi un email</p>
+          </div>
+          <a href="#" class="mt-4 inline-block text-base font-semibold text-white">unavaneethpro@gmail.com</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-y-12 rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 shadow-sm transition-colors duration-300">
+        <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white shadow-sm">
+          <svg class="h-6 w-6 text-gray-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="flex flex-auto flex-col items-start">
+          <div class="flex-auto">
+            <h3 class="text-xl font-medium tracking-tight text-gray-900 dark:text-white">Contactez-moi au</h3>
+            <p class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">Par message ou appel</p>
+          </div>
+          <a href="#" class="mt-4 inline-block text-base font-semibold text-white">+33 7 66 67 92 96</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+   <footer class="bg-white dark:bg-gray-800 mt-12 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <p>&copy; Portefolio Navaneetharajah Umesh</p>
+        </div>
+    </footer>
+    <script>
+
+        // Dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Sauvegarder la préférence de thème dans localStorage
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Menu mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lissage de la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -60;
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation de scroll avec Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Formulaire de contact
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('There was a problem sending your message. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('There was a problem sending your message. Please try again.');
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

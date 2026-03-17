@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetharajah Umesh - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="accueil.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold text-primary-light dark:text-primary-dark">Portefolio</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="./accueil.html" class="flex items-center gap-1 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300" title="Accueil">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a href="./competences.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Compétences</a>
+                    <a href="./stages.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Stages</a>
+                    <a href="./veille.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Veille</a>
+                    <a href="./contacts.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contacts</a>
+                </div>
+                <div class="flex items-center">
+                    <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+            <a href="./accueil.html" class="flex items-center gap-2 py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                </svg>
+                Home
+            </a>
+            <a href="./competences.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Compétences</a>
+            <a href="./stages.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Stages</a>
+            <a href="./veille.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Veille</a>
+            <a href="./contacts.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contacts</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 flex-grow">
+        <section class="w-full mx-auto py-10 bg-gray-50 dark:bg-gray-900 dark:text-white">
+  <!-- Title -->
+  <div
+    class="w-fit pb-1 px-2 mx-4 rounded-md text-2xl font-semibold border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+    Stage dans l'association SavoirFormer</div>
+
+  <div class="w-full h-full flex flex-col items-center md:py-4 py-10">
+    <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full aspect-square object-cover md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483268015872016566/9a52da76-d73d-41fa-ab5f-99858ae968c5.jpg?ex=69b9f87c&is=69b8a6fc&hm=0c50f33dabe34f008e139a1a5e62c9d3309d7f20fe4018a1534e90d0320fa33d&" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Première semaine</h2>
+        <p class="text-md mt-4">Ma mission s'est articulée autour de la gestion du local informatique et de la refonte du site internet de l’établissement. La première semaine a débuté par une phase d’intégration durant laquelle j’ai visité l’établissement et rencontré les interlocuteurs clés, notamment ma tutrice, le proviseur et l’équipe pédagogique. Dès le premier jour, nous avons instauré un emploi du temps hybride et flexible afin d’optimiser la productivité, prévoyant trois jours de présence physique pour l’assistance technique et deux jours de télétravail dédiés au développement web. J’ai consacré le reste de cette semaine à l’organisation logistique du local informatique, en procédant à un tri complet des câblages et des équipements afin de transformer cet espace en un environnement de travail fonctionnel et ergonomique.
+</div>
+
+    </div>
+    <!-- Col - 3 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+      <!--  -->
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Deuxième semaine</h2>
+
+        <p class="text-md mt-4">À partir de la deuxième semaine, j’ai mis en application le rythme d’alternance convenu, partageant mon temps entre le support technique auprès des professeurs et la préparation de mon poste de développement. J’ai profité de mes jours de présence au lycée pour configurer mes outils de travail, tandis que mes journées en distanciel ont été consacrées à la conception des premières maquettes graphiques et à la définition d’une arborescence de navigation plus cohérente. 
+        </p>
+        </div>
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483269227010850968/image.png?ex=69b9f99d&is=69b8a81d&hm=e915abcfb91556c3b91bd48afd586dc79489b208df0fa91466c74258cb01caab&" alt="billboard image" />
+
+    </div>
+    <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483269625478385937/image.png?ex=69b9f9fc&is=69b8a87c&hm=f8ffbe2fd93e78acd21fa7866bfb77aebaa7a3b4e8dfba83aeb14354664b5716&" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Troisième semaine</h2>
+        <p class="text-md mt-4">Durant la troisième semaine, j’ai soumis ces propositions visuelles à ma tutrice ainsi qu’aux enseignants ayant travaillé sur la version précédente du site. Une fois leur accord obtenu, j’ai entamé l’intégration technique en créant des versions de travail pour les pages principales, en modernisant l’en-tête (header), le pied de page (footer) et la barre de navigation pour offrir un style plus épuré et professionnel.
+        </p>
+</div>
+
+    </div>
+    <!-- Col - 3 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+      <!--  -->
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Quatrième semaine</h2>
+
+        <p class="text-md mt-4">La quatrième semaine a suivi une dynamique similaire, tout en intégrant une mission spécifique de maintenance matérielle auprès de l’assistante sociale. J’ai pris en charge la mise à jour complète de son poste informatique en remplaçant son moniteur obsolète par un écran récent et en installant de nouveaux périphériques de saisie, tout en réaménageant son bureau pour améliorer son confort d’utilisation.
+        </p>
+</div>
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="" alt="billboard image" />
+
+  </div>
+  <!-- Col - 2 -->
+    <div
+      class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <!--  -->
+      <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://cdn.discordapp.com/attachments/1350842308202860544/1483270131214979176/IMG_20260112_105737.jpg?ex=69b9fa75&is=69b8a8f5&hm=b4a7e5eb53f5bd4e1b3f6f1ab13685a9dea34d45a7aa57b3a78f034fd7b74fa9&" alt="billboard image" />
+
+      <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Cinquième et dernière semaine</h2>
+        <p class="text-md mt-4"> Au cours de la cinquième semaine, mon activité s’est orientée vers les vidéoprojecteurs, qui présenter des pannes et afin de les diagnostiquer j'ai passer plusieurs test, ce qui m’a permis de réhabiliter les appareils fonctionnels en effectuant des transferts d’ampoules et en isolant le matériel défaillant.
+            La dernière semaine, j’ai donc eu un rendez- vous avec l'équipe du lycée afin de montrer le rendu du site et d’en discuter.
+        </p>
+        </div>
+
+    </div>
+</section>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 mt-12 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <p>&copy; Portefolio Navaneetharajah Umesh</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Sauvegarder la préférence de thème dans localStorage
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Menu mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lissage de la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -60;
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation de scroll avec Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetharajah Umesh - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="accueil.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold text-primary-light dark:text-primary-dark">Portefolio</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="./accueil.html" class="flex items-center gap-1 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300" title="Accueil">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a href="./competences.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Compétences</a>
+                    <a href="./stages.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Stages</a>
+                    <a href="./veille.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Veille</a>
+                    <a href="./contacts.html" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">Contacts</a>
+                </div>
+                <div class="flex items-center">
+                    <button id="mobileMenuToggle" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+            <a href="./accueil.html" class="flex items-center gap-2 py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 21h6a2 2 0 002-2V9l-7-4-7 4v10a2 2 0 002 2z" />
+                </svg>
+                Home
+            </a>
+            <a href="./competences.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Compétences</a>
+            <a href="./stages.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Stages</a>
+            <a href="./veille.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Veille</a>
+            <a href="./contacts.html" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">Contacts</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <section class="w-full mx-auto py-10 bg-gray-50 dark:bg-gray-900 dark:text-white">
+            <div class="text-center">
+                <h2 class="text-3xl text-gray-900 dark:text-white font-bold mb-12">Veille : La sécurité du cloud et l'intervention de l'IA dans ce domaine</h2>
+            </div>
+            <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
+                <div class="flex md:contents flex-row-reverse">
+                    <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-2 col-end-5 mr-auto md:mr-0 md:ml-auto">
+                        <h3 class="text-lg font-semibold lg:text-xl"><strong>2011 - 2013 : L'Audit et l'Identité</strong></h3>
+                        <p class="mt-2 leading-6">Concentration sur la gestion des accès. AWS IAM (2011) introduit la gestion fine des identités. AWS CloudTrail (2013) permet de tracer chaque appel d'API pour auditer les opérations en cloud.</p>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Sources :</strong> Documentation AWS IAM ; Rapport Gartner sur l'IAM (2011) ; Annonce officielle AWS CloudTrail (2013) ; Security at Scale: Logging in AWS (Livre blanc).</p>
+                        <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">2011 - 2013</span>
+                    </div>
+                    <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+                        <div class="flex items-center justify-center w-6 h-full">
+                            <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+                        </div>
+                        <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
+                    </div>
+                </div>
+
+                <div class="flex md:contents">
+                    <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+                        <div class="flex items-center justify-center w-6 h-full">
+                            <div class="w-1 h-full bg-indigo-300"></div>
+                        </div>
+                        <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
+                    </div>
+                    <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-9 mr-auto">
+                        <h3 class="text-lg font-semibold lg:text-xl"><strong>2014 - 2019 : Le Zero Trust et l'IA Prédictive</strong></h3>
+                        <p class="mt-2 leading-6">Introduction du modèle Zero Trust par Google BeyondCorp (2014). Amazon Macie (2017) utilise le Machine Learning pour découvrir et protéger automatiquement les données sensibles (PII) dans le cloud.</p>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Sources :</strong> BeyondCorp: A New Approach to Enterprise Security (Google Research) ; Forrester Wave: Zero Trust eXtended Ecosystem ; Lancement d'Amazon Macie (2017) ; TechCrunch: AWS launches Macie to secure data.</p>
+                        <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">2014 - 2019</span>
+                    </div>
+                </div>
+
+                <div class="flex md:contents flex-row-reverse">
+                    <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-2 col-end-5 mr-auto md:mr-0 md:ml-auto">
+                        <h3 class="text-lg font-semibold lg:text-xl"><strong>2020 - 2024 : L'IA Générative et la Posture</strong></h3>
+                        <p class="mt-2 leading-6">L'IA passe à l'assistance en langage naturel. Wiz (2020) utilise des graphes corrélés par IA pour identifier les chemins d'attaque. Microsoft Security Copilot (2024) avec GPT-4 permet aux analystes de poser des questions en français.</p>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Sources :</strong> Wiz Case Study (2022) ; Forbes: How Wiz became the fastest-growing software company ; Microsoft Security Copilot General Availability (Avril 2024) ; Introduction to Copilot for Security (Cloud Direct).</p>
+                        <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">2020 - 2024</span>
+                    </div>
+                    <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+                        <div class="flex items-center justify-center w-6 h-full">
+                            <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+                        </div>
+                        <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
+                    </div>
+                </div>
+
+                <div class="flex md:contents">
+                    <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+                        <div class="flex items-center justify-center w-6 h-full">
+                            <div class="w-1 h-full bg-indigo-300"></div>
+                        </div>
+                        <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
+                    </div>
+                    <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-9 mr-auto">
+                        <h3 class="text-lg font-semibold lg:text-xl"><strong>2025 - 2026 : L'Ère de l'IA Agentique</strong></h3>
+                        <p class="mt-2 leading-6">L'IA devient un agent autonome capable d'agir seul. Amazon Bedrock AgentCore (2025) reconfigure les infrastructures en cas d'attaque. AI-Native SOC (2026) est géré à 90% par des IA capables de bloquer les menaces Zero Day.</p>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Sources :</strong> AWS re:Invent 2025: Era of Agentic AI ; AWS Bedrock Agents Documentation ; CrowdStrike 2026 Global Threat Report ; The State of AI in the Cloud 2025 (Wiz Report).</p>
+                        <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">2025 - 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white dark:bg-gray-800 mt-auto transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <p>&copy; Portefolio Navaneetharajah Umesh</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Sauvegarder la préférence de thème dans localStorage
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Menu mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lissage de la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -60;
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation de scroll avec Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
